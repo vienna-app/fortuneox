@@ -2,107 +2,69 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Acesso Liberado</title>
     
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // O TEU ID JÁ FOI INSERIDO ABAIXO
+    fbq('init', '1262862459392710'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1262862459392710&ev=PageView&noscript=1"
+    /></noscript>
     <style>
-        body {
+        * { box-sizing: border-box; }
+        body, html {
+            margin: 0; padding: 0;
+            width: 100%; height: 100%;
             background-color: #000;
             color: #fff;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            overflow: hidden; text-align: center;
         }
-
-        .container {
-            width: 90%;
-            max-width: 400px;
-        }
-
-        .status {
-            color: #00ff00;
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        h1 {
-            font-size: 26px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .bonus-box {
-            border: 1px dashed #555;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-
-        .bonus-val {
-            display: block;
-            font-size: 32px;
-            font-weight: 900;
-            color: #ffcc00;
-        }
-
+        .container { width: 90%; max-width: 400px; }
+        .status { color: #34c759; font-size: 12px; font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        h1 { font-size: 24px; margin-bottom: 20px; line-height: 1.2; font-weight: 700; }
+        .bonus-highlight { background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 20px; margin-bottom: 35px; border: 1px solid rgba(255, 255, 255, 0.1); }
+        .bonus-val { display: block; font-size: 34px; font-weight: 900; color: #fff; margin-top: 5px; }
         .cta-button {
-            display: block;
-            background-color: #00e676;
-            color: #000;
-            text-decoration: none;
-            padding: 22px;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: 800;
-            text-transform: uppercase;
-            box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
+            display: block; background-color: #ffffff; color: #007aff;
+            text-decoration: none; padding: 20px; border-radius: 14px;
+            font-size: 20px; font-weight: 800; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.1s;
         }
-
-        .footer {
-            margin-top: 30px;
-            font-size: 11px;
-            color: #444;
-            text-transform: uppercase;
-        }
+        .cta-button:active { transform: scale(0.96); }
+        .footer { margin-top: 40px; font-size: 10px; color: #444; text-transform: uppercase; letter-spacing: 1px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="status">● Conexão Segura Estabelecida</div>
-        
-        <h1>Sua conta foi qualificada para o bônus hoje.</h1>
-
-        <div class="bonus-box">
-            <span>BÔNUS ATUAL:</span>
+        <div class="status">● Conexão Segura</div>
+        <h1>Sua vaga foi reservada com sucesso!</h1>
+        <div class="bonus-highlight">
+            <span style="color: #ffcc00; font-weight: bold;">BÔNUS EXCLUSIVO ATIVO:</span>
             <span class="bonus-val">100% NO PIX</span>
-            <small>Válido pelos próximos 15 minutos</small>
+            <small style="color: #888;">Expira em: 14:59 minutos</small>
         </div>
 
-        <a href="SEU_LINK_AQUI" class="cta-button" onclick="track()">
-            ENTRAR NA PLATAFORMA
+        <a href="https://a188try.com/?a=j2vwxl23" class="cta-button" onclick="fbq('track', 'Lead');">
+            🔗 JOGAR AGORA
         </a>
 
-        <div class="footer">
-            Proibido para menores de 18 anos.<br>
-            Aposte com responsabilidade.
-        </div>
+        <div class="footer"> +18 anos | Jogue com responsabilidade </div>
     </div>
-
-    <script>
-        function track() {
-            // O comando do seu pixel vai aqui para contar a conversão do clique
-            console.log("Lead clicou - Redirecionando...");
-        }
-    </script>
 
 </body>
 </html>
